@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyCDISC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyCDISC/tidyCDISC_{{ version }}.tar.gz
-  sha256: c65b6d390ee93b7bda31dcb697d81a19d3d3181309bca3acb3bbe2650a89f91a
+  sha256: eee164571d60d1573478c19f00dd3d8654c0a356df20b364ae7cfbf6dfcdf3d2
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -95,22 +95,11 @@ test:
 about:
   home: https://github.com/Biogen-Inc/tidyCDISC/, https://Biogen-Inc.github.io/tidyCDISC/
   license: AGPL-3.0-or-later
-  summary: Provides users a quick exploratory dive into common visualizations without writing
-    a single line of code given the users data follows the Analysis Data Model (ADaM)
-    standards put forth by the Clinical Data Interchange Standards Consortium (CDISC)
-    <https://www.cdisc.org>. Prominent modules/ features of the application are the
-    Table Generator, Population Explorer, and the Individual Explorer. The Table Generator
-    allows users to drag and drop variables and desired statistics (frequencies, means,
-    ANOVA, t-test, and other summary statistics) into bins that automagically create
-    stunning tables with validated information. The Population Explorer offers various
-    plots to visualize general trends in the population from various vantage points.
-    Plot modules currently include scatter plot, spaghetti plot, box plot, histogram,
-    means plot, and bar plot. Each plot type allows the user to plot uploaded variables
-    against one another, and dissect the population by filtering out certain subjects.
-    Last, the Individual Explorer establishes a cohesive patient narrative, allowing
-    the user to interact with patient metrics (params) by visit or plotting important
-    patient events on a timeline. All modules allow for concise filtering & downloading
-    bulk outputs into html or pdf formats to save for later.
+  summary: Provides users a quick exploratory dive into common visualizations without writing a single line of code given the users data follows the Analysis Data Model (ADaM) standards put forth by the Clinical Data Interchange Standards Consortium (CDISC) <https://www.cdisc.org>. Prominent modules/ features of the 
+    application are the Table Generator, Population Explorer, and the Individual Explorer. The Table Generator allows users to drag and drop variables and desired statistics (frequencies, means, ANOVA, t-test, and other summary statistics) into bins that automagically create stunning tables with validated information. 
+    The Population Explorer offers various plots to visualize general trends in the population from various vantage points. Plot modules currently include scatter plot, spaghetti plot, box plot, histogram, means plot, and bar plot. Each plot type allows the user to plot uploaded variables against one another, and 
+    dissect the population by filtering out certain subjects. Last, the Individual Explorer establishes a cohesive patient narrative, allowing the user to interact with patient metrics (params) by visit or plotting important patient events on a timeline. All modules allow for concise filtering & downloading bulk 
+    outputs into html or pdf formats to save for later.
   license_family: AGPL
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3'
